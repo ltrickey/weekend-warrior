@@ -1,9 +1,11 @@
 gem 'minitest', '>= 5.0.0'
 require 'minitest/pride'
 require 'minitest/autorun'
+#This relative file needs to be in the same folder
 require_relative 'hello_world'
 
 describe "Hello World" do
+
   it "When given no name, it should greet the world!" do
     expect(hello_world).must_equal 'Hello, World!'
   end
@@ -19,4 +21,5 @@ describe "Hello World" do
   it "When given an empty string it should greet the world!" do
     expect(hello_world '').must_equal 'Hello, World!'
   end
+
 end
